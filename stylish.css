@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@300&display=swap");
+
+/*     
+    light mode:
+    #FFEEEE
+    #FFF6EA
+    #F7E9D7
+    #EBD8C3 */
+/*
+    night mode:
+    362222
+    171010
+    423F3E
+    2B2B2B
+
+ */
+
+/*
+    sample dark mode for css
+    
+     :root{
+      --primary-color: (color code)
+      --secondary-color: (color code)
+     }
+
+     .dark-mode{
+      --primary-color: (color code)
+      --secondary-color: (color code)
+    
+            --> to initialize in a element
+            background-color : var(--primary-color);
+
+    }
+
+ */
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  transition: 300ms;
+}
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #ebd8c3;
+  --secondary-color: #000;
+  --tertiary-color: #d87e18;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-h1: 36px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+}
+
+.darkmode {
+  --primary-color: #171010;
+  --secondary-color: #fff;
+  --tertiary-color: #d8bea0;
+}
+#nav-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--tertiary-color);
+}
+
+#nav-container #nav-title {
+  font-size: var(--font-size-h3);
+  color: var(--secondary-color);
+  margin: 20px;
+  word-spacing: 5px;
+  justify-self: center;
+  align-self: center;
+}
+
+#nav-title h1:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+#nav-list {
+  display: flex;
+  text-decoration: none;
+}
+
+#nav-list img {
+  padding-top: 5px;
+  height: 30px;
+  width: 30px;
+}
+
+#nav-list img:hover {
+  transition: 300ms;
+  cursor: pointer;
+  padding: 0px;
+  transform: scale(1.5);
+  margin: 0px;
+}
+
+#nav-list ul {
+  color: var(--secondary-color);
+  word-spacing: 50px;
+  list-style: none;
+  justify-self: center;
+  align-self: center;
+  margin-right: 3rem;
+}
+
+#nav-list ul li {
+  display: inline;
+  transition: transform 0.3 ease;
+}
+
+#nav-list ul li a {
+  color: var(--secondary-color);
+  font-size: var(--font-size-medium);
+  text-decoration: none;
+}
+
+#nav-list ul li a:hover {
+  transition: 500ms;
+  font-size: var(--font-size-h4);
+  text-decoration: solid;
+  color: var(--primary-color);
+}
+
+.toggle-button {
+  display: none;
+  height: 100px;
+  width: 50px;
+}
+
+.toggle-button .bars {
+  height: 8px;
+  margin-bottom: 5px;
+  width: 50px;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+}
+
+.section-container {
+  height: 800px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-texts {
+  width: 40%;
+  margin: 50px 0px 0px 80px;
+}
+.section-title {
+  font-size: 3rem;
+  text-align: left;
+  margin: 20px 0px;
+  color: var(--secondary-color);
+}
+
+.section-info {
+  text-indent: 100px;
+  font-size: 1;
+  text-align: justify;
+  margin: 0px 20px;
+  line-height: 2;
+  color: var(--secondary-color);
+}
+
+.section-image {
+  display: flex;
+  height: inherit;
+}
+
+.section-image img {
+  height: 500px;
+  width: 500px;
+  margin: 80px 100px;
+  -webkit-box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+}
+
+#article-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.article-box {
+  margin: 50px 0px;
+  height: 300px;
+  width: 300px;
+  border: var(--secondary-color) 2px solid;
+  border-radius: 15px;
+  -webkit-box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -22px 24px 50px -12px rgba(0, 0, 0, 0.75);
+}
+
+.box-title {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 24px;
+}
+.box-texts {
+  text-align: justify;
+  margin: 20px;
+  color: var(--secondary-color);
+}
+
+.footer-container {
+  display: flex;
+  height: 200px;
+  color: var(--secondary-color);
+  justify-content: center;
+}
+
+.footer-text {
+  text-align: center;
+  align-self: flex-end;
+  margin: 20px 0px;
+}
+.footer-text p {
+  margin-top: 25px;
+}
+
+@media only screen and (min-width: 999px) {
+  #nav-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .toggle-button {
+    display: block;
+    position: absolute;
+    top: 2.5%;
+    left: 85%;
+  }
+
+  .toggle-button .bars:hover {
+    cursor: pointer;
+    background-color: beige;
+  }
+
+  #nav-container {
+    display: flex;
+    height: 80px;
+  }
+
+  #nav-container #nav-title {
+    margin:auto;
+    display: block;
+    font-size: var(--font-size-medium);
+    text-align: center;
+  }
+
+  #nav-list {
+    padding: 20px 0px;
+    display: none;
+    background-color: var(--tertiary-color);
+    position: relative;
+    z-index: 2;
+  }
+  #nav-list img:hover {
+    height: 60px;
+    width: 60px;
+    margin: 0px;
+  }
+
+  #nav-list img {
+    height: 50px;
+    width: 50px;
+  }
+  #nav-list ul {
+    margin: auto;
+    text-align: center;
+  }
+
+  #nav-list ul li {
+    display: block;
+    margin: 0 50px;
+    color: var(--primary-color);
+  }
+
+  #nav-list ul li a {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  #nav-list ul li a:hover {
+    font-size: var(--font-size-medium);
+  }
+
+  .active {
+    display: block;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .section-container {
+    display: block;
+    height: 900px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0px;
+    color: var(--secondary-color);
+  }
+
+  .section-info {
+    text-indent: 50px;
+    font-size: 1;
+    text-align: justify;
+    margin: 0px 20px;
+    line-height: 2;
+    color: var(--secondary-color);
+  }
+  .section-image {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+  .section-texts {
+    width: 100%;
+    margin: 0px;
+    padding: 20px 50px;
+  }
+
+  .section-image img {
+    height: 400px;
+    width: 450px;
+    position: absolute;
+    left: 1%;
+  }
+  #article-container {
+    display: block;
+  }
+
+  .article-box {
+    margin: 100px 0px;
+    display: block;
+    width: 50%;
+    position: relative;
+    left: 23%;
+    height: 300px;
+  }
+
+  .box-title {
+    margin: 10px 0px;
+    font-size: 18px;
+  }
+
+  .box-texts {
+    margin: 5px 20px;
+    line-height: 2;
+  }
+}
+
+/* 
+@media only screen and (min-width: 800px){
+
+    #nav-list{
+        display: flex;
+      
+}
+} */
