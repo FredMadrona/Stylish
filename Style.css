@@ -19,7 +19,7 @@ html{
     --ascent-color: #fbfffb;
     --secondary-color: #deb36d;
     --font-size-small: 12px;
-    --font-size-medium: 16px;
+    --font-size-medium: 1.1px;
     --font-size-h4: 1.2rem;
     --font-size-h3: 1.5rem;
     --font-size-h2: 2rem;
@@ -188,11 +188,57 @@ padding-left: 15px;
   color: var(--primary-color);
 }
 
+.HeroImageCouch-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: black 1px solid; */
+  padding: 5% 0;
+}
+
+.HeroImageCouch-container img{
+  /* border: black 1px solid; */
+  display: none;
+}
+
+/* services section */
+.services-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-content: center;
+  background-color: var(--text-color);
+  padding: 5%;
+}
+
+.services-container .service-box{
+  margin: 10% 0;
+  padding: 0 5%;
+  color: var(--ascent-color);
+}
+
+.services-container .service-box h3{
+  font-size: var(--font-size-h3);
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.services-container .service-box p{
+  font-size: var(--font-size-h4);
+  font-weight: lighter;
+  line-height: 2rem;
+
+}
+
 
 @media (min-width: 800px) and (max-width: 1400px){
 
   .searchbar button{
    width: 15%;
+  }
+  .services-container{
+    grid-template-columns: auto auto;
   }
 }
 
@@ -231,6 +277,14 @@ ul{
     padding: 0 3px;
   }
 
+
+  .HeroImageCouch-container img{
+    width: 75%;
+  }
+
+.services-container{
+  grid-template-columns: auto;
+}
 }
 
   
